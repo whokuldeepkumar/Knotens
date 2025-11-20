@@ -1,0 +1,342 @@
+<!-- About Hero Section -->
+<section class="about-hero">
+  <div class="hero-background">
+    <div class="hero-shape shape-1"></div>
+    <div class="hero-shape shape-2"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="500">
+      <h1 class="hero-title"><strong>About {{ companyInfo.name }}</strong></h1>
+      <p class="hero-subtitle">Building the future of software, one innovation at a time</p>
+      <!-- <p class="hero-description">We are a team of passionate developers, designers, and innovators dedicated to transforming businesses through cutting-edge technology solutions.</p> -->
+    </div>
+  </div>
+</section>
+
+<!-- Company Story Section -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-content" data-aos="fade-right" data-aos-duration="400">
+        <h2 class="section-title"><strong>Our Story</strong></h2>
+        <p class="section-subtitle"><strong>From vision to reality</strong></p>
+        <p class="story-text">Founded in 2021, {{ companyInfo.fullName }} emerged from a simple yet powerful vision: to bridge the gap between innovative technology and business success. What started as a small team of passionate developers has grown into a full-service software development company.</p>
+        <p class="story-text">Today, we serve clients across the globe, delivering custom software solutions that drive digital transformation and business growth. Our commitment to excellence and innovation remains at the core of everything we do.</p>
+        <div class="story-stats">
+          <div class="stat-box">
+            <h3>{{ companyInfo.stats.projectsCompleted }}</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-box">
+            <h3>{{ companyInfo.stats.happyClients }}</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-box">
+            <h3>{{ companyInfo.stats.yearsExperience }}</h3>
+            <p>Years of Excellence</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-image" data-aos="fade-left" data-aos-duration="400">
+        <div class="image-placeholder">
+          <svg viewBox="0 0 400 300" width="100%" height="100%">
+            <defs>
+              <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect width="400" height="300" fill="url(#aboutGrad)" opacity="0.2"/>
+            <circle cx="200" cy="150" r="80" fill="url(#aboutGrad)" opacity="0.6"/>
+            <text x="200" y="160" text-anchor="middle" fill="white" font-size="24" font-weight="bold">Innovation</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision Section -->
+<section class="mission-vision-section">
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400">
+        <div class="mv-icon">
+          <svg viewBox="0 0 64 64" width="48" height="48">
+            <defs>
+              <linearGradient id="missionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="28" fill="url(#missionGrad)"/>
+            <path d="M32 16l-8 8 8 8 8-8z" fill="white"/>
+            <path d="M32 32l-8 8h16z" fill="white" opacity="0.7"/>
+          </svg>
+        </div>
+        <h3>Our Mission</h3>
+        <p>To empower businesses with innovative software solutions that drive growth, efficiency, and digital transformation in an ever-evolving technological landscape.</p>
+      </div>
+      <div class="mv-card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
+        <div class="mv-icon">
+          <svg viewBox="0 0 64 64" width="48" height="48">
+            <defs>
+              <linearGradient id="visionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#764ba2;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="28" fill="url(#visionGrad)"/>
+            <circle cx="32" cy="32" r="12" fill="white"/>
+            <circle cx="32" cy="32" r="6" fill="url(#visionGrad)"/>
+          </svg>
+        </div>
+        <h3>Our Vision</h3>
+        <p>To be the leading software development partner recognized globally for delivering exceptional, innovative solutions that shape the future of technology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values Section -->
+<section class="values-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>Our Core Values</strong></h2>
+      <p class="section-subtitle">The principles that guide everything we do</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400">
+        <div class="value-icon">💡</div>
+        <h3>Innovation</h3>
+        <p>We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
+        <div class="value-icon">🎯</div>
+        <h3>Excellence</h3>
+        <p>We are committed to delivering the highest quality in every project, exceeding expectations.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="400">
+        <div class="value-icon">🤝</div>
+        <h3>Collaboration</h3>
+        <p>We believe in the power of teamwork and building strong partnerships with our clients.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+        <div class="value-icon">🔒</div>
+        <h3>Integrity</h3>
+        <p>We operate with transparency, honesty, and ethical practices in all our business dealings.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="250" data-aos-duration="400">
+        <div class="value-icon">⚡</div>
+        <h3>Agility</h3>
+        <p>We adapt quickly to changes and deliver solutions with speed and efficiency.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="400">
+        <div class="value-icon">🌟</div>
+        <h3>Customer Focus</h3>
+        <p>Our clients' success is our success. We prioritize their needs and goals above all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>Why Choose {{ companyInfo.name }}?</strong></h2>
+      <p class="section-subtitle">What sets us apart from the competition</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item" data-aos="fade-right" data-aos-delay="50" data-aos-duration="400">
+        <div class="why-number">01</div>
+        <h3>Expert Team</h3>
+        <p>Our team consists of highly skilled developers, designers, and strategists with years of industry experience.</p>
+      </div>
+      <div class="why-item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="400">
+        <div class="why-number">02</div>
+        <h3>Proven Track Record</h3>
+        <p>We have successfully delivered {{ companyInfo.stats.projectsCompleted }} projects across various industries with 100% client satisfaction.</p>
+      </div>
+      <div class="why-item" data-aos="fade-right" data-aos-delay="150" data-aos-duration="400">
+        <div class="why-number">03</div>
+        <h3>Cutting-Edge Technology</h3>
+        <p>We leverage the latest technologies and frameworks to build scalable, future-proof solutions.</p>
+      </div>
+      <div class="why-item" data-aos="fade-right" data-aos-delay="200" data-aos-duration="400">
+        <div class="why-number">04</div>
+        <h3>Agile Methodology</h3>
+        <p>Our agile approach ensures faster delivery, flexibility, and continuous improvement throughout the project.</p>
+      </div>
+      <div class="why-item" data-aos="fade-right" data-aos-delay="250" data-aos-duration="400">
+        <div class="why-number">05</div>
+        <h3>24/7 Support</h3>
+        <p>We provide {{ companyInfo.stats.support }} support to ensure your systems run smoothly and issues are resolved quickly.</p>
+      </div>
+      <div class="why-item" data-aos="fade-right" data-aos-delay="300" data-aos-duration="400">
+        <div class="why-number">06</div>
+        <h3>Competitive Pricing</h3>
+        <p>We offer high-quality solutions at competitive prices, ensuring the best value for your investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Approach Section -->
+<section class="approach-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>Our Approach</strong></h2>
+      <p class="section-subtitle">A proven process that delivers results</p>
+    </div>
+    <div class="approach-timeline">
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400">
+        <div class="timeline-number">1</div>
+        <div class="timeline-content">
+          <h3>Discovery & Planning</h3>
+          <p>We analyze your requirements, define goals, and create a detailed project roadmap.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
+        <div class="timeline-number">2</div>
+        <div class="timeline-content">
+          <h3>Design & Prototype</h3>
+          <p>Our designers create intuitive interfaces and interactive prototypes for your approval.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="150" data-aos-duration="400">
+        <div class="timeline-number">3</div>
+        <div class="timeline-content">
+          <h3>Development & Testing</h3>
+          <p>We build your solution using agile methodology with continuous testing and quality assurance.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+        <div class="timeline-number">4</div>
+        <div class="timeline-content">
+          <h3>Launch & Support</h3>
+          <p>We deploy your solution and provide ongoing support to ensure smooth operations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technology Stack Section -->
+<section class="tech-stack-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>Technologies We Master</strong></h2>
+      <p class="section-subtitle">Cutting-edge tools and frameworks we use to build exceptional solutions</p>
+    </div>
+    <div class="tech-categories">
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400">
+        <h3>Frontend</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Vue.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Next.js</span>
+        </div>
+      </div>
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
+        <h3>Backend</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">.NET</span>
+          <span class="tech-tag">Go</span>
+        </div>
+      </div>
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="150" data-aos-duration="400">
+        <h3>Mobile</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">React Native</span>
+          <span class="tech-tag">iOS</span>
+          <span class="tech-tag">Android</span>
+          <span class="tech-tag">Ionic</span>
+        </div>
+      </div>
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+        <h3>Cloud & DevOps</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">Azure</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Kubernetes</span>
+          <span class="tech-tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>What Our Clients Say</strong></h2>
+      <p class="section-subtitle">Real feedback from businesses we've helped transform</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">{{ companyInfo.name }} delivered an exceptional e-commerce platform that exceeded our expectations. Their attention to detail and technical expertise is outstanding.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JD</div>
+          <div class="author-info">
+            <h4>John Davis</h4>
+            <p>CEO, TechRetail Inc.</p>
+          </div>
+        </div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">Working with {{ companyInfo.name }} was a game-changer for our healthcare system. They transformed our operations with their innovative EHR solution.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div class="author-info">
+            <h4>Sarah Martinez</h4>
+            <p>CTO, HealthCare Plus</p>
+          </div>
+        </div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="400">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">The mobile banking app they developed has significantly improved our customer engagement. Professional, responsive, and highly skilled team.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RP</div>
+          <div class="author-info">
+            <h4>Robert Park</h4>
+            <p>Director, FinanceHub</p>
+          </div>
+        </div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="about-cta-section">
+  <div class="cta-background">
+    <div class="cta-shape shape-1"></div>
+    <div class="cta-shape shape-2"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in" data-aos-duration="400">
+      <div class="cta-icon">🚀</div>
+      <h2><strong>Ready to Work With Us?</strong></h2>
+      <p>Let's discuss how we can help transform your business with innovative software solutions.</p>
+      <button mat-flat-button class="cta-button" routerLink="/contact">
+        <span>Get In Touch</span>
+        <span class="button-arrow">→</span>
+      </button>
+    </div>
+  </div>
+</section>

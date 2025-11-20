@@ -1,0 +1,682 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-background"></div>
+  <div class="hero-content">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="hero-badge" data-aos="fade-down" data-aos-duration="400">
+            <span class="badge-icon">✨</span>
+            <span>Trusted by {{ companyInfo.stats.happyClients }} Companies Worldwide</span>
+          </div>
+          <h1 class="hero-title" data-aos="fade-up" data-aos-duration="500">
+            <span class="company-name">{{ companyInfo.name }}</span>
+            <span class="company-type">{{ companyInfo.tagline }}</span>
+          </h1>
+          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+            <strong>Digital Excellence Through Innovation</strong>
+          </p>
+          <p class="hero-description" data-aos="fade-up" data-aos-delay="150">
+            {{ companyInfo.description }}
+          </p>
+          
+          <div class="hero-features" data-aos="fade-up" data-aos-delay="200">
+            <div class="hero-feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 64 64" width="32" height="32">
+                  <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="32" cy="32" r="28" fill="url(#grad1)" opacity="0.2"/>
+                  <path d="M32 8L16 18v16c0 10 6.9 19.4 16 21.7 9.1-2.3 16-11.7 16-21.7V18L32 8z" fill="url(#grad1)"/>
+                  <path d="M28 32l-4-4 2-2 2 2 8-8 2 2z" fill="white"/>
+                </svg>
+              </span>
+              <div class="feature-text">
+                <strong>Fast Delivery</strong>
+                <span>Agile Development</span>
+              </div>
+            </div>
+            <div class="hero-feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 64 64" width="32" height="32">
+                  <defs>
+                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#0099FF;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="32" cy="32" r="28" fill="url(#grad2)" opacity="0.2"/>
+                  <rect x="20" y="24" width="24" height="20" rx="2" fill="url(#grad2)"/>
+                  <path d="M26 24v-6c0-3.3 2.7-6 6-6s6 2.7 6 6v6" stroke="url(#grad2)" stroke-width="3" fill="none"/>
+                  <circle cx="32" cy="34" r="3" fill="white"/>
+                </svg>
+              </span>
+              <div class="feature-text">
+                <strong>Secure</strong>
+                <span>Enterprise Grade</span>
+              </div>
+            </div>
+            <div class="hero-feature">
+              <span class="feature-icon">
+                <svg viewBox="0 0 64 64" width="32" height="32">
+                  <defs>
+                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#C06C84;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="32" cy="32" r="28" fill="url(#grad3)" opacity="0.2"/>
+                  <circle cx="32" cy="32" r="20" fill="url(#grad3)"/>
+                  <path d="M24 32l6 6 12-12" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="feature-text">
+                <strong>Quality</strong>
+                <span>100% Satisfaction</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-buttons" data-aos="fade-up" data-aos-delay="250">
+            <button mat-flat-button class="btn-primary" routerLink="/services">
+              <span>Get a Demo</span>
+              <span class="btn-icon">→</span>
+            </button>
+            <button mat-stroked-button class="btn-secondary" routerLink="/contact">
+              <span class="btn-icon">💻</span>
+              <span>Start Free Trial</span>
+            </button>
+          </div>
+          
+          <!-- <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat">
+              <span class="stat-value">50+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">25+</span>
+              <span class="stat-label">Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">3+</span>
+              <span class="stat-label">Years</span>
+            </div>
+          </div> -->
+        </div>
+        
+        <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500">
+          <div class="visual-card card-1">
+            <div class="card-icon">💻</div>
+            <div class="card-content">
+              <h4>Web Development</h4>
+              <p>Modern & Responsive</p>
+            </div>
+          </div>
+          <div class="visual-card card-2">
+            <div class="card-icon">📱</div>
+            <div class="card-content">
+              <h4>Mobile Apps</h4>
+              <p>iOS & Android</p>
+            </div>
+          </div>
+          <div class="visual-card card-3">
+            <div class="card-icon">☁️</div>
+            <div class="card-content">
+              <h4>Cloud Solutions</h4>
+              <p>Scalable & Secure</p>
+            </div>
+          </div>
+          <div class="visual-card card-4">
+            <div class="card-icon">🤖</div>
+            <div class="card-content">
+              <h4>AI Integration</h4>
+              <p>Smart Automation</p>
+            </div>
+          </div>
+          <div class="visual-card card-5">
+            <div class="card-icon">📢</div>
+            <div class="card-content">
+              <h4>Ad Management</h4>
+              <p>Digital Marketing</p>
+            </div>
+          </div>
+          <div class="visual-card card-6">
+            <div class="card-icon">🎨</div>
+            <div class="card-content">
+              <h4>Graphic Design</h4>
+              <p>Creative Solutions</p>
+            </div>
+          </div>
+          <div class="hero-circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="floating-elements">
+    <div class="floating-element element-1"></div>
+    <div class="floating-element element-2"></div>
+  </div>
+</section>
+
+<!-- Client Trust Section -->
+<section class="client-trust-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>Trusted Partners</strong></h2>
+      <p class="section-subtitle"><strong>Powering innovation</strong> for industry leaders</p>
+    </div>
+    <div class="logos-slider">
+      <div class="logos-track">
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/microsoft/white" alt="Microsoft">
+            <div class="company-info">
+              <h4>Microsoft</h4>
+              <p>Enterprise Solutions</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/amazon/white" alt="Amazon">
+            <div class="company-info">
+              <h4>Amazon</h4>
+              <p>E-Commerce Platform</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/google/white" alt="Google">
+            <div class="company-info">
+              <h4>Google</h4>
+              <p>Cloud Services</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/apple/white" alt="Apple">
+            <div class="company-info">
+              <h4>Apple</h4>
+              <p>Technology Innovation</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/meta/white" alt="Meta">
+            <div class="company-info">
+              <h4>Meta</h4>
+              <p>Social Media</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/netflix/white" alt="Netflix">
+            <div class="company-info">
+              <h4>Netflix</h4>
+              <p>Streaming Platform</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/tesla/white" alt="Tesla">
+            <div class="company-info">
+              <h4>Tesla</h4>
+              <p>Electric Vehicles</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/ibm/white" alt="IBM">
+            <div class="company-info">
+              <h4>IBM</h4>
+              <p>Cloud & AI</p>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/microsoft/white" alt="Microsoft">
+            <div class="company-info">
+              <h4>Microsoft</h4>
+              <p>Enterprise Solutions</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/amazon/white" alt="Amazon">
+            <div class="company-info">
+              <h4>Amazon</h4>
+              <p>E-Commerce Platform</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/google/white" alt="Google">
+            <div class="company-info">
+              <h4>Google</h4>
+              <p>Cloud Services</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/apple/white" alt="Apple">
+            <div class="company-info">
+              <h4>Apple</h4>
+              <p>Technology Innovation</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/meta/white" alt="Meta">
+            <div class="company-info">
+              <h4>Meta</h4>
+              <p>Social Media</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/netflix/white" alt="Netflix">
+            <div class="company-info">
+              <h4>Netflix</h4>
+              <p>Streaming Platform</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/tesla/white" alt="Tesla">
+            <div class="company-info">
+              <h4>Tesla</h4>
+              <p>Electric Vehicles</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-card">
+            <img src="https://cdn.simpleicons.org/ibm/white" alt="IBM">
+            <div class="company-info">
+              <h4>IBM</h4>
+              <p>Cloud & AI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>Our Expertise</strong></h2>
+      <p class="section-subtitle"><strong>Comprehensive software solutions</strong> for modern businesses</p>
+      <!-- <p class="section-description">We deliver cutting-edge technology solutions that transform businesses and drive innovation across industries</p> -->
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400">
+        <div class="service-icon">
+          <span class="icon">💻</span>
+        </div>
+        <h3 class="service-title">Custom Software</h3>
+        <p class="service-description">Tailored applications built with cutting-edge technologies to meet your unique business requirements.</p>
+        <div class="service-features">
+          <span class="feature">🌐 Web Applications</span>
+          <span class="feature">📱 Mobile Apps</span>
+          <span class="feature">🖥️ Desktop Software</span>
+          <span class="feature">⚡ API Development</span>
+        </div>
+        <div class="service-footer">
+          <span class="service-badge">Most Popular</span>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
+        <div class="service-icon">
+          <span class="icon">📱</span>
+        </div>
+        <h3 class="service-title">Social Media Marketing</h3>
+        <p class="service-description">Strategic social media campaigns that boost engagement, build brand awareness across all platforms</p>
+        <div class="service-features">
+          <span class="feature">📊 Content Strategy</span>
+          <span class="feature">📣 Campaign Management</span>
+          <span class="feature">📈 Analytics & Insights</span>
+          <span class="feature">🎯 Audience Targeting</span>
+        </div>
+        <div class="service-footer">
+          <span class="service-badge">Trending</span>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="400">
+        <div class="service-icon">
+          <span class="icon">📢</span>
+        </div>
+        <h3 class="service-title">Ad Management</h3>
+        <p class="service-description">Strategic advertising campaigns across Google, Facebook, and social platforms to maximize ROI</p>
+        <div class="service-features">
+          <span class="feature">🎯 Google Ads</span>
+          <span class="feature">👥 Facebook Ads</span>
+          <span class="feature">📊 Performance Tracking</span>
+          <span class="feature">💰 Budget Optimization</span>
+        </div>
+        <div class="service-footer">
+          <span class="service-badge">Enterprise</span>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="400">
+        <div class="service-icon">
+          <span class="icon">🎨</span>
+        </div>
+        <h3 class="service-title">UI/UX Design</h3>
+        <p class="service-description">Beautiful, intuitive interfaces that provide exceptional user experiences and drive engagement</p>
+        <div class="service-features">
+          <span class="feature">🎭 User Research</span>
+          <span class="feature">✨ Prototyping</span>
+          <span class="feature">🖌️ Visual Design</span>
+          <span class="feature">📐 Responsive</span>
+        </div>
+        <div class="service-footer">
+          <span class="service-badge">Creative</span>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="250" data-aos-duration="400">
+        <div class="service-icon">
+          <span class="icon">📱</span>
+        </div>
+        <h3 class="service-title">Mobile App Development</h3>
+        <p class="service-description">Native and cross-platform mobile apps for iOS and Android with seamless user experiences and robust functionality</p>
+        <div class="service-features">
+          <span class="feature">🍎 iOS Development</span>
+          <span class="feature">🤖 Android Development</span>
+          <span class="feature">⚡ React Native</span>
+          <span class="feature">🔄 Flutter</span>
+        </div>
+        <div class="service-footer">
+          <span class="service-badge">Critical</span>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="400">
+        <div class="service-icon">
+          <span class="icon">📈</span>
+        </div>
+        <h3 class="service-title">Digital Transformation</h3>
+        <p class="service-description">End-to-end digital transformation services to modernize your business and stay ahead of the competition</p>
+        <div class="service-features">
+          <span class="feature">💡 Strategy</span>
+          <span class="feature">🚀 Implementation</span>
+          <span class="feature">📊 Analytics</span>
+          <span class="feature">🎓 Training</span>
+        </div>
+        <div class="service-footer">
+          <span class="service-badge">Strategic</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Categories Section -->
+<app-project-category></app-project-category>
+
+<!-- Case Studies Section -->
+<section class="case-studies-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><strong>Success Stories</strong></h2>
+      <p class="section-subtitle">Real results from real projects</p>
+    </div>
+    
+    <div class="case-studies-grid">
+      <div class="case-study-card">
+        <div class="case-study-header">
+          <span class="case-badge">E-Commerce</span>
+          <h3 class="case-title"><strong>Online Retail Platform</strong></h3>
+        </div>
+        <div class="case-content">
+          <div class="case-item">
+            <h4><strong>Challenge</strong></h4>
+            <p>Legacy system causing 40% cart abandonment and slow checkout process</p>
+          </div>
+          <div class="case-arrow">→</div>
+          <div class="case-item">
+            <h4><strong>Solution</strong></h4>
+            <p>Built modern React-based platform with optimized payment gateway</p>
+          </div>
+          <div class="case-arrow">→</div>
+          <div class="case-item">
+            <h4><strong>Result</strong></h4>
+            <p><strong class="highlight">65% faster checkout</strong> and <strong class="highlight">2x revenue growth</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-header">
+          <span class="case-badge">Healthcare</span>
+          <h3 class="case-title"><strong>Patient Management System</strong></h3>
+        </div>
+        <div class="case-content">
+          <div class="case-item">
+            <h4><strong>Challenge</strong></h4>
+            <p>Manual processes leading to data errors and delayed patient care</p>
+          </div>
+          <div class="case-arrow">→</div>
+          <div class="case-item">
+            <h4><strong>Solution</strong></h4>
+            <p>Developed cloud-based EHR system with AI-powered scheduling</p>
+          </div>
+          <div class="case-arrow">→</div>
+          <div class="case-item">
+            <h4><strong>Result</strong></h4>
+            <p><strong class="highlight">80% reduction in errors</strong> and <strong class="highlight">50% faster processing</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-header">
+          <span class="case-badge">FinTech</span>
+          <h3 class="case-title"><strong>Mobile Banking App</strong></h3>
+        </div>
+        <div class="case-content">
+          <div class="case-item">
+            <h4><strong>Challenge</strong></h4>
+            <p>Low user engagement and security concerns with existing app</p>
+          </div>
+          <div class="case-arrow">→</div>
+          <div class="case-item">
+            <h4><strong>Solution</strong></h4>
+            <p>Created secure Flutter app with biometric auth and real-time alerts</p>
+          </div>
+          <div class="case-arrow">→</div>
+          <div class="case-item">
+            <h4><strong>Result</strong></h4>
+            <p><strong class="highlight">3x daily active users</strong> and <strong class="highlight">4.8★ rating</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400">
+        <div class="stat-icon">🚀</div>         
+        <div class="stat-number">{{ companyInfo.stats.projectsCompleted }}</div>
+        <div class="stat-label">Projects Delivered</div>
+        <div class="stat-glow"></div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
+        <div class="stat-icon">😊</div>
+        <div class="stat-number">{{ companyInfo.stats.happyClients }}</div>
+        <div class="stat-label">Happy Clients</div>
+        <div class="stat-glow"></div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="400">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-number">{{ companyInfo.stats.yearsExperience }}</div>
+        <div class="stat-label">Years Experience</div>
+        <div class="stat-glow"></div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="400">
+        <div class="stat-icon">💬</div>
+        <div class="stat-number">{{ companyInfo.stats.support }}</div>
+        <div class="stat-label">Support Available</div>
+        <div class="stat-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Members Section -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title">Meet Our Team</h2>
+      <p class="section-subtitle">Talented professionals dedicated to delivering exceptional results</p>
+    </div>
+    
+    <div class="team-slider">
+      <div class="slider-track">
+        <div class="team-card" *ngFor="let member of allMembers" (click)="openMemberModal(member)">
+          <div class="member-image">
+            <img [src]="member.image" [alt]="member.name">
+            <div class="image-overlay">
+              <div class="overlay-content">
+                <span class="view-profile">View Profile</span>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{member.name}}</h3>
+            <p class="member-designation">{{member.designation}}</p>
+            <div class="member-technologies">
+              <span class="tech-tag" *ngFor="let tech of member.technologies">{{tech}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Member Modal -->
+<div class="modal-overlay" [class.active]="isModalOpen" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()" *ngIf="selectedMember">
+    <button class="modal-close" (click)="closeModal()">&times;</button>
+    <div class="modal-body">
+      <div class="modal-image">
+        <img [src]="selectedMember.image" [alt]="selectedMember.name">
+      </div>
+      <div class="modal-info">
+        <h2 class="modal-name">{{selectedMember.name}}</h2>
+        <p class="modal-designation">{{selectedMember.designation}}</p>
+        <p class="modal-bio">{{selectedMember.bio}}</p>
+        <div class="modal-technologies">
+          <h4>Technologies & Skills</h4>
+          <div class="tech-list">
+            <span class="tech-item" *ngFor="let tech of selectedMember.technologies">{{tech}}</span>
+          </div>
+        </div>
+        <div class="modal-experience">
+          <h4>Experience</h4>
+          <p>{{selectedMember.experience}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-background">
+    <div class="cta-shape shape-1"></div>
+    <div class="cta-shape shape-2"></div>
+    <div class="cta-shape shape-3"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in" data-aos-duration="400">
+      <div class="cta-icon" data-aos="flip-up" data-aos-delay="50" data-aos-duration="400">🚀</div>
+      <h2 class="cta-title" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400"><strong>Ready to Transform Your Business?</strong></h2>
+      <p class="cta-description" data-aos="fade-up" data-aos-delay="150" data-aos-duration="400"><strong>Let's discuss how we can help you achieve your digital goals</strong> and take your business to the next level</p>
+      <div class="cta-features" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+        <div class="cta-feature">
+          <span class="feature-icon">
+            <svg viewBox="0 0 48 48" width="28" height="28">
+              <defs>
+                <linearGradient id="ctaGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#4ADE80;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#22C55E;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="24" r="20" fill="url(#ctaGrad1)"/>
+              <path d="M16 24l6 6 12-12" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Free Consultation</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">
+            <svg viewBox="0 0 48 48" width="28" height="28">
+              <defs>
+                <linearGradient id="ctaGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="24" r="20" fill="url(#ctaGrad2)"/>
+              <path d="M24 10l-4 14h8l-4 14" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Quick Response</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">
+            <svg viewBox="0 0 48 48" width="28" height="28">
+              <defs>
+                <linearGradient id="ctaGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="24" r="20" fill="url(#ctaGrad3)"/>
+              <circle cx="18" cy="20" r="4" fill="white"/>
+              <circle cx="30" cy="20" r="4" fill="white"/>
+              <circle cx="24" cy="32" r="4" fill="white"/>
+            </svg>
+          </span>
+          <span>Expert Team</span>
+        </div>
+      </div>
+      <button mat-flat-button class="cta-button" routerLink="/contact" data-aos="zoom-in" data-aos-delay="250" data-aos-duration="400">
+        <span>Get Started Today</span>
+        <span class="button-arrow">→</span>
+      </button>
+      <p class="cta-note" data-aos="fade-up" data-aos-delay="300" data-aos-duration="400">Start your project today</p>
+    </div>
+  </div>
+</section>

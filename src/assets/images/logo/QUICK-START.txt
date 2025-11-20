@@ -1,0 +1,43 @@
+═══════════════════════════════════════════════════════════
+  KNOTENS LOGO - QUICK START GUIDE
+═══════════════════════════════════════════════════════════
+
+📍 YOU ARE HERE:
+   src/assets/images/logo/
+
+✅ WHAT TO DO:
+   1. Save your company logo as "logo.png" in THIS folder
+   2. Recommended size: 200x200px or 512x512px (square)
+   3. Format: PNG with transparent background
+   4. Refresh your browser - Done!
+
+📁 FILE PATH:
+   d:\Ang\KNO\knotens-website\src\assets\images\logo\logo.png
+
+🎨 DESIGN TIPS:
+   - Use circular or square design (will be displayed in circle)
+   - Match brand colors: Purple #667eea, Blue #764ba2
+   - Transparent background recommended
+   - Keep it simple for small sizes (50x50px)
+
+🔧 ALREADY CONFIGURED:
+   ✓ Header component updated
+   ✓ SCSS styling ready
+   ✓ Responsive design set
+   ✓ Animations added
+
+📝 OPTIONAL FILES:
+   - logo-icon.png (icon only, no text)
+   - logo-white.png (white version)
+   - favicon.ico (browser tab icon)
+
+💡 TEMPORARY SOLUTION:
+   Using logo-placeholder.svg until you add logo.png
+
+🆘 NEED HELP?
+   Read: LOGO-SETUP-GUIDE.md in project root
+   Or: README.md in this folder
+
+═══════════════════════════════════════════════════════════
+  Just add logo.png and you're done! 🚀
+═══════════════════════════════════════════════════════════

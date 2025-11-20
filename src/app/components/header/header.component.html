@@ -1,0 +1,22 @@
+<header class="modern-header">
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/home" class="logo-link">
+        <div class="logo-icon">
+          <img src="/images/logo/logo.png" alt="Knotens Logo" class="logo-image">
+        </div>
+        <div class="logo-content">
+          <span class="logo-text">{{ companyInfo.name }}</span>
+          <span class="logo-subtitle">{{ companyInfo.tagline }}</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="nav-menu">
+      <a routerLink="/home" routerLinkActive="active-link" class="nav-link">Home</a>
+      <a routerLink="/about" routerLinkActive="active-link" class="nav-link">About</a>
+      <a routerLink="/services" routerLinkActive="active-link" class="nav-link">Services</a>
+      <a routerLink="/contact" routerLinkActive="active-link" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
