@@ -17,72 +17,42 @@
 <section class="contact-main-section">
   <div class="container">
     <div class="contact-wrapper">
+
       <!-- Contact Form -->
       <div class="contact-form-container" data-aos="fade-right" data-aos-duration="400">
-        <div class="form-header">
-          <h2><strong>Send Us a Message</strong></h2>
-          <p>Fill out the form below and we'll get back to you within 24 hours</p>
+        <div class="form-card">
+          <div class="form-header">
+            <h2><strong>Send Us a Message</strong></h2>
+            <p>Fill out the form below and we'll get back to you within 24 hours</p>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile *</label>
+              <input type="tel" id="mobile" name="mobile" placeholder="+91 9876543210" required>
+            </div>
+            <div class="form-group">
+              <label for="details">Details *</label>
+              <textarea id="details" name="details" rows="3" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" mat-flat-button class="submit-button">
+              <span>Send Message</span>
+              <span class="button-arrow">→</span>
+            </button>
+          </form>
         </div>
-        <form class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name *</label>
-              <input type="text" id="firstName" name="firstName" placeholder="John" required>
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name *</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
-          </div>
-          <div class="form-group">
-            <label for="company">Company Name</label>
-            <input type="text" id="company" name="company" placeholder="Your Company">
-          </div>
-          <div class="form-group">
-            <label for="service">Service Interested In *</label>
-            <select id="service" name="service" required>
-              <option value="">Select a service</option>
-              <option value="web">Web Development</option>
-              <option value="mobile">Mobile App Development</option>
-              <option value="cloud">Cloud Solutions</option>
-              <option value="ai">AI & Machine Learning</option>
-              <option value="uiux">UI/UX Design</option>
-              <option value="api">API Development</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="budget">Project Budget</label>
-            <select id="budget" name="budget">
-              <option value="">Select budget range</option>
-              <option value="5k-10k">$5,000 - $10,000</option>
-              <option value="10k-25k">$10,000 - $25,000</option>
-              <option value="25k-50k">$25,000 - $50,000</option>
-              <option value="50k-100k">$50,000 - $100,000</option>
-              <option value="100k+">$100,000+</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Project Details *</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-          </div>
-          <button type="submit" mat-flat-button class="submit-button">
-            <span>Send Message</span>
-            <span class="button-arrow">→</span>
-          </button>
-        </form>
       </div>
 
       <!-- Contact Info -->
       <div class="contact-info-container" data-aos="fade-left" data-aos-duration="400">
+
         <div class="info-card">
           <h3><strong>Contact Information</strong></h3>
           <p class="info-subtitle">Reach out to us through any of these channels</p>
@@ -98,6 +68,12 @@
               <div class="info-content">
                 <h4>Office Address</h4>
                 <p>{{ companyInfo.contact.address.street }}, {{ companyInfo.contact.address.city }}<br>{{ companyInfo.contact.address.state }} {{ companyInfo.contact.address.zip }}, {{ companyInfo.contact.address.country }}</p>
+                <button class="directions-btn" (click)="getDirections()">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M21.71 11.29l-9-9a1 1 0 00-1.42 0l-9 9 .71.71L12 3.41V20h1V3.41l8.29 8.29z"/>
+                  </svg>
+                  Get Directions
+                </button>
               </div>
             </div>
 
@@ -128,7 +104,7 @@
           </div>
         </div>
 
-        <div class="social-card">
+        <!-- <div class="social-card">
           <h4><strong>Follow Us</strong></h4>
           <div class="social-links">
             <a [href]="companyInfo.socialMedia.linkedin" class="social-link" aria-label="LinkedIn">
@@ -152,7 +128,7 @@
               </svg>
             </a>
           </div>
-        </div>
+        </div> -->
 
         <div class="hours-card">
           <h4><strong>Business Hours</strong></h4>
@@ -161,17 +137,19 @@
               <span>Monday - Friday</span>
               <span>{{ companyInfo.businessHours.weekdays.split(': ')[1] }}</span>
             </div>
-            <div class="hours-item">
+            <!-- <div class="hours-item">
               <span>Saturday</span>
               <span>{{ companyInfo.businessHours.saturday.split(': ')[1] }}</span>
-            </div>
+            </div> -->
             <div class="hours-item">
-              <span>Sunday</span>
+              <span>Saturday - Sunday</span>
               <span>{{ companyInfo.businessHours.sunday.split(': ')[1] }}</span>
             </div>
           </div>
         </div>
+        
       </div>
+
     </div>
   </div>
 </section>
@@ -180,21 +158,39 @@
 <section class="map-section">
   <div class="container">
     <div class="map-container" data-aos="fade-up" data-aos-duration="400">
-      <div class="map-placeholder">
-        <svg viewBox="0 0 800 400" width="100%" height="100%">
-          <defs>
-            <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.3" />
-              <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.3" />
-            </linearGradient>
-          </defs>
-          <rect width="800" height="400" fill="url(#mapGrad)"/>
-          <circle cx="400" cy="200" r="40" fill="#667eea" opacity="0.8"/>
-          <path d="M400 180 L400 200 L410 210" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <text x="400" y="260" text-anchor="middle" fill="white" font-size="18" font-weight="600">Our Office Location</text>
-          <text x="400" y="285" text-anchor="middle" fill="white" font-size="14" opacity="0.8">{{ companyInfo.contact.address.street }}, {{ companyInfo.contact.address.city }}, {{ companyInfo.contact.address.state }}</text>
-        </svg>
-      </div>
+      <iframe 
+        [src]="companyInfo.contact.location.mapUrl | safe: 'resourceUrl'"
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
+    
+    <!-- <div class="reviews-container" data-aos="fade-up" data-aos-duration="600">
+      <div class="reviews-header">
+        <h3><strong>Google Reviews</strong></h3>
+        <p>What our clients say about us</p>
+      </div>
+      <div class="reviews-list">
+        <div class="review-item" *ngFor="let review of reviews">
+          <div class="review-content">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">{{ review.name.charAt(0) }}</div>
+              <div class="reviewer-details">
+                <h5>{{ review.name }}</h5>
+                <div class="rating">
+                  <span class="star" *ngFor="let star of [1,2,3,4,5]" [class.filled]="star <= review.rating">★</span>
+                </div>
+                <span class="review-date">{{ review.date }}</span>
+              </div>
+            </div>
+            <p class="review-text">{{ review.comment }}</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </div>
 </section>
