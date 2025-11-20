@@ -28,8 +28,11 @@ export class AppComponent implements OnInit {
     // Only initialize AOS in the browser, not on server
     if (isPlatformBrowser(this.platformId)) {
       AOS.init({
-        duration: 1000,
+        duration: 400,
         once: true,
+        offset: 0,
+        disable: false,
+        startEvent: 'load'
       });
     }
   }

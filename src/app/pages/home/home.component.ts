@@ -75,6 +75,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.allMembers = [...this.teamMembers, ...this.teamMembers, ...this.teamMembers];
+    
+    // Initialize AOS with offset to show content immediately
+    if (typeof window !== 'undefined') {
+      import('aos').then(AOS => {
+        AOS.default.init({
+          duration: 400,
+          once: true,
+          offset: 0,
+          disable: false
+        });
+      });
+    }
   }
 
   openMemberModal(member: TeamMember): void {
