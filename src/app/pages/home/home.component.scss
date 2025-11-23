@@ -5,15 +5,10 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
-  background-size: 200% 200%;
-  animation: gradientShift 15s ease infinite;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
+
 
 .hero-background {
   position: absolute;
@@ -470,8 +465,9 @@
 .logos-track {
   display: flex;
   gap: 2rem;
-  animation: logoSlide 30s linear infinite;
+  animation: logoSlide 40s linear infinite;
   width: max-content;
+  will-change: transform;
   
   &:hover {
     animation-play-state: paused;
@@ -479,8 +475,8 @@
 }
 
 @keyframes logoSlide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-100% / 2)); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .logo-item {
@@ -494,20 +490,38 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
-  padding: 1.2rem 1rem;
+  padding: 1.5rem 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  height: 100%;
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
   &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 32, 44, 0.85), rgba(45, 55, 72, 0.85));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -516,22 +530,28 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     transition: left 0.5s;
+    z-index: 2;
   }
   
   &:hover {
     transform: translateY(-8px) scale(1.05);
-    border-color: rgba(102, 126, 234, 0.4);
+    border-color: rgba(102, 126, 234, 0.6);
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.08));
     
     &::before {
+      background: linear-gradient(135deg, rgba(26, 32, 44, 0.5), rgba(45, 55, 72, 0.5));
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    
+    &::after {
       left: 100%;
     }
     
     img {
-      filter: grayscale(0%) brightness(1);
+      filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 15px rgba(102, 126, 234, 0.6));
       opacity: 1;
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
     
     .company-info {
@@ -541,14 +561,16 @@
   }
   
   img {
-    height: 50px;
+    height: 80px;
     width: auto;
-    max-width: 140px;
+    max-width: 160px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(1.3);
-    opacity: 0.7;
+    filter: grayscale(100%) brightness(1.3) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    opacity: 0.8;
     transition: all 0.3s ease;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 3;
   }
   
   .company-info {
@@ -556,20 +578,35 @@
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
     
     h4 {
       font-size: 0.95rem;
       font-weight: 700;
       color: white;
       margin: 0 0 0.2rem 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
     
     p {
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.9);
       margin: 0;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
   }
+}
+
+.logo-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 @media (max-width: 768px) {
@@ -590,12 +627,6 @@
       max-width: 120px;
     }
   }
-}
-
-// Duplicate logos for infinite scroll
-.logos-track::after {
-  content: '';
-  display: none;
 }
 
 // Services Section
@@ -1108,8 +1139,9 @@
 .slider-track {
   display: flex;
   gap: 2.5rem;
-  animation: slide 60s linear infinite;
+  animation: slide 40s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 
 .slider-track:hover {
@@ -1117,12 +1149,8 @@
 }
 
 @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% / 3));
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .team-card {
@@ -1135,11 +1163,11 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
-  min-width: 380px;
+  width: 350px;
+  height: 500px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
   
   &::before {
     content: '';
@@ -1180,7 +1208,7 @@
 .member-image {
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 250px;
   overflow: hidden;
   flex-shrink: 0;
   border-bottom: 3px solid rgba(102, 126, 234, 0.3);
@@ -1234,15 +1262,16 @@
 }
 
 .member-info {
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   text-align: left;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   z-index: 2;
   background: linear-gradient(180deg, rgba(26, 32, 44, 0.5) 0%, rgba(45, 55, 72, 0.3) 100%);
+  min-height: 250px;
 }
 
 .member-name {
@@ -1267,6 +1296,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: flex-start;
+  margin-top: auto;
 }
 
 .tech-tag {
@@ -1675,7 +1705,8 @@
   }
   
   .team-card {
-    min-width: 320px;
+    width: 300px;
+    height: 450px;
   }
   
   .modal-body {
@@ -1705,14 +1736,16 @@
   }
   
   .team-card {
-    min-width: 280px;
+    width: 280px;
+    height: 420px;
     
     .member-image {
-      height: 180px;
+      height: 200px;
     }
     
     .member-info {
       padding: 1rem;
+      min-height: 220px;
     }
   }
   

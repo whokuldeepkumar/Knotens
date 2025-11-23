@@ -57,6 +57,114 @@ export const CompanyInfo = {
     support: '24/7'
   },
   
+  // Client Trust Section
+  clients: [
+    {
+      name: 'Kashmir Easy Travels',
+      description: 'Travel & Tourism Platform',
+      logo: '1faRBFoI3pR0WdeLvT3cBSwaSzTMqZ7mN',
+      website: 'https://www.kashmireasytravels.com'
+    },
+    {
+      name: 'JJ 1 Gram Gold',
+      description: 'Gold Trading Platform',
+      logo: '1ebbK0FHAkLD5MTxgznHforQhb_v8GTYv',
+      website: 'https://smcorg.com'
+    },
+    {
+      name: 'Kashmir Easy Travels',
+      description: 'Travel & Tourism Platform',
+      logo: '1faRBFoI3pR0WdeLvT3cBSwaSzTMqZ7mN',
+      website: 'https://www.kashmireasytravels.com'
+    },
+    {
+      name: 'JJ 1 Gram Gold',
+      description: 'Gold Trading Platform',
+      logo: '1ebbK0FHAkLD5MTxgznHforQhb_v8GTYv',
+      website: 'https://smcorg.com'
+    },
+    {
+      name: 'Kashmir Easy Travels',
+      description: 'Travel & Tourism Platform',
+      logo: '1faRBFoI3pR0WdeLvT3cBSwaSzTMqZ7mN',
+      website: 'https://www.kashmireasytravels.com'
+    },
+    {
+      name: 'JJ 1 Gram Gold',
+      description: 'Gold Trading Platform',
+      logo: '1ebbK0FHAkLD5MTxgznHforQhb_v8GTYv',
+      website: 'https://smcorg.com'
+    }
+  ],
+
+  // Featured Projects
+  projects: [
+    {
+      id: 1,
+      title: 'Kashmir Easy Travels',
+      description: 'Complete travel booking platform with tour packages, hotel reservations, and customer management system.',
+      category: 'Travel & Tourism',
+      type: 'web',
+      image: '',
+      technologies: ['Angular', 'Node.js', 'MongoDB'],
+      features: ['Online Booking', 'Payment Gateway', 'Admin Dashboard'],
+      liveUrl: 'https://www.kashmireasytravels.com',
+      featured: true
+    },
+    {
+      id: 2,
+      title: 'JJ 1 Gram Gold Trading',
+      description: 'Secure gold trading platform with real-time pricing, portfolio management, and transaction history.',
+      category: 'FinTech',
+      type: 'fintech',
+      image: '',
+      technologies: ['React', 'Express', 'MySQL'],
+      features: ['Real-time Pricing', 'Secure Trading', 'Portfolio Tracking'],
+      liveUrl: 'https://smcorg.com',
+      featured: true
+    }
+  ],
+
+  // Team Members
+  teamMembers: [
+    {
+      id: 1,
+      name: 'Kuldeep Kumar',
+      designation: 'Founder & Lead Software Developer',
+      image: '1CjWlHGyzu4OLNpyhk9GO4yvkA4spfvr9',
+      technologies: ['.Net', 'Angular', 'C#', 'SQL Server', 'PostgreSQL'],
+      bio: 'Passionate full-stack developer and entrepreneur with a vision to create impactful web solutions. Skilled in building scalable applications and leading development teams.',
+      experience: '4+ years in software development and project management. Experienced in delivering end-to-end solutions for diverse industries.'
+    },
+    {
+      id: 2,
+      name: 'Shubham Soni',
+      designation: '.Net Developer & Angular Specialist',
+      image: '13m2jnZeg1f5EeIcAkkmoHtRhBLUZUlET',
+      technologies: ['.NET', 'C#', 'Angular', 'SQL Server'],
+      bio: 'Creative designer and frontend developer who bridges the gap between design and development. Focuses on creating intuitive and beautiful user experiences.',
+      experience: '4+ years in UI/UX design and frontend development. Proficient in modern design tools and frontend frameworks.'
+    },
+    {
+      id: 3,
+      name: 'Udit Pareek',
+      designation: 'MERN Stack Developer',
+      image: '1KDcwZxUO74wTp7gmilpqiDzlcyyPmBZ4',
+      technologies: ['Node.js', 'Express', 'MongoDB', 'React'],
+      bio: 'Backend developer with a knack for building robust server-side applications. Experienced in designing RESTful APIs and managing databases.',
+      experience: '1+ years in backend development. Skilled in creating scalable and efficient server-side solutions.'
+    },
+    {
+      id: 4,
+      name: 'Bharat Mewara',
+      designation: '.Net Developer & React Specialist',
+      image: '1KDcwZxUO74wTp7gmilpqiDzlcyyPmBZ4',
+      technologies: ['.NET', 'C#', 'React', 'SQL Server'],
+      bio: 'React developer passionate about building dynamic web applications. Focuses on creating seamless user interfaces and experiences.',
+      experience: '4+ years in frontend development. Experienced in building responsive and interactive web applications.'
+    }
+  ],
+  
   // Legal
   legal: {
     copyright: `© ${new Date().getFullYear()} Knotens Softwares. All rights reserved.`,

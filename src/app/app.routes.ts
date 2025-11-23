@@ -6,6 +6,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { About } from './pages/about/about';
 import { Services } from './pages/services/services';
+import { ProjectsComponent } from './pages/projects/projects';
 import { Contact } from './pages/contact/contact';
 
 // 2. Define your website's routes
@@ -13,6 +14,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'about', component: About },
     { path: 'services', component: Services },
+    { path: 'projects', component: ProjectsComponent },
     { path: 'contact', component: Contact },
 
     // 3. Add a default route

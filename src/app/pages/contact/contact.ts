@@ -6,7 +6,7 @@ import { GoogleReviewsService, Review } from '../../services/google-reviews.serv
 
 @Component({
   selector: 'app-contact',
-  imports: [SafePipe, NgFor],
+  imports: [SafePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

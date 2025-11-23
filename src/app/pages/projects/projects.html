@@ -1,0 +1,174 @@
+<!-- Projects Hero Section -->
+<section class="projects-hero">
+  <div class="hero-background">
+    <div class="hero-shape shape-1"></div>
+    <div class="hero-shape shape-2"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="500">
+      <h1 class="hero-title"><strong>Our Projects</strong></h1>
+      <p class="hero-subtitle">Showcasing innovative solutions we've delivered</p>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-projects-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>Featured Work</strong></h2>
+      <p class="section-subtitle">Our most impactful projects</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card featured" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Kashmir+Easy+Travels" alt="Kashmir Easy Travels">
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-category">Travel & Tourism</div>
+          <h3>Kashmir Easy Travels</h3>
+          <p>Complete travel booking platform with tour packages, hotel reservations, and customer management system.</p>
+          <div class="project-features">
+            <span class="feature">Online Booking</span>
+            <span class="feature">Payment Gateway</span>
+            <span class="feature">Admin Dashboard</span>
+          </div>
+          <div class="project-actions">
+            <button mat-flat-button class="project-btn primary" (click)="openProject('https://www.kashmireasytravels.com')">
+              <span>View Live</span>
+              <span class="btn-icon">↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card featured" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=JJ+1+Gram+Gold" alt="JJ 1 Gram Gold">
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-category">FinTech</div>
+          <h3>JJ 1 Gram Gold Trading</h3>
+          <p>Secure gold trading platform with real-time pricing, portfolio management, and transaction history.</p>
+          <div class="project-features">
+            <span class="feature">Real-time Pricing</span>
+            <span class="feature">Secure Trading</span>
+            <span class="feature">Portfolio Tracking</span>
+          </div>
+          <div class="project-actions">
+            <button mat-flat-button class="project-btn primary" (click)="openProject('https://smcorg.com')">
+              <span>View Live</span>
+              <span class="btn-icon">↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- All Projects Section -->
+<section class="all-projects-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="400">
+      <h2 class="section-title"><strong>All Projects</strong></h2>
+      <p class="section-subtitle">Complete portfolio of our work</p>
+    </div>
+    
+    <!-- Project Filter -->
+    <div class="project-filters" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400">
+      <button class="filter-btn active" (click)="filterProjects('all')">All</button>
+      <button class="filter-btn" (click)="filterProjects('web')">Web Apps</button>
+      <button class="filter-btn" (click)="filterProjects('mobile')">Mobile Apps</button>
+      <button class="filter-btn" (click)="filterProjects('ecommerce')">E-commerce</button>
+      <button class="filter-btn" (click)="filterProjects('fintech')">FinTech</button>
+    </div>
+
+    <div class="projects-grid-all">
+      <div class="project-card" *ngFor="let project of filteredProjects" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400">
+        <div class="project-image">
+          <img [src]="project.image" [alt]="project.title">
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-category">{{ project.category }}</div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="project-features">
+            <span class="feature" *ngFor="let feature of project.features">{{ feature }}</span>
+          </div>
+          <div class="project-actions">
+            <button mat-flat-button class="project-btn primary" (click)="openProject(project.liveUrl)" *ngIf="project.liveUrl">
+              <span>View Live</span>
+              <span class="btn-icon">↗</span>
+            </button>
+            <button mat-stroked-button class="project-btn secondary" *ngIf="project.caseStudy">
+              <span>Case Study</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Stats Section -->
+<section class="project-stats-section">
+  <div class="container">
+    <div class="stats-grid" data-aos="fade-up" data-aos-duration="400">
+      <div class="stat-card">
+        <div class="stat-number">{{ companyInfo.stats.projectsCompleted }}</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">{{ companyInfo.stats.happyClients }}</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Technologies Used</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Success Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="projects-cta-section">
+  <div class="cta-background">
+    <div class="cta-shape shape-1"></div>
+    <div class="cta-shape shape-2"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in" data-aos-duration="400">
+      <div class="cta-icon">🚀</div>
+      <h2><strong>Start Your Project Today</strong></h2>
+      <p>Ready to bring your ideas to life? Let's discuss your next project.</p>
+      <button mat-flat-button class="cta-button" routerLink="/contact">
+        <span>Get Started</span>
+        <span class="button-arrow">→</span>
+      </button>
+    </div>
+  </div>
+</section>

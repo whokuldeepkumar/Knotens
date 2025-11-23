@@ -5,8 +5,9 @@ import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
-import * as AOS from 'aos';
+import { CommonModule } from '@angular/common';
+import { DriveImagePipe } from './drive-image-pipe';
+import { CompanyInfo } from './config/company-info';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,9 @@ import * as AOS from 'aos';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CommonModule,
+    DriveImagePipe
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
@@ -27,13 +30,17 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // Only initialize AOS in the browser, not on server
     if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        duration: 400,
-        once: true,
-        offset: 0,
-        disable: false,
-        startEvent: 'load'
-      });
+      setTimeout(() => {
+        import('aos').then(AOS => {
+          AOS.default.init({
+            duration: 400,
+            once: true,
+            offset: 0,
+            disable: false,
+            startEvent: 'load'
+          });
+        });
+      }, 100);
     }
   }
 }

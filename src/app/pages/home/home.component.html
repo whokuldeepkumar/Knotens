@@ -86,9 +86,9 @@
               <span>Get a Demo</span>
               <span class="btn-icon">→</span>
             </button>
-            <button mat-stroked-button class="btn-secondary" routerLink="/contact">
-              <span class="btn-icon">💻</span>
-              <span>Start Free Trial</span>
+            <button mat-stroked-button class="btn-secondary" routerLink="/projects">
+              <span class="btn-icon">🎯</span>
+              <span>View Our Work</span>
             </button>
           </div>
           
@@ -162,157 +162,23 @@
   </div>
 </section>
 
-<!-- Client Trust Section -->
+<!-- Trusted Partners Section -->
 <section class="client-trust-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up" data-aos-duration="400">
       <h2 class="section-title"><strong>Trusted Partners</strong></h2>
       <p class="section-subtitle"><strong>Powering innovation</strong> for industry leaders</p>
     </div>
-    <div class="logos-slider">
-      <div class="logos-track">
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/microsoft/white" alt="Microsoft">
-            <div class="company-info">
-              <h4>Microsoft</h4>
-              <p>Enterprise Solutions</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/amazon/white" alt="Amazon">
-            <div class="company-info">
-              <h4>Amazon</h4>
-              <p>E-Commerce Platform</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/google/white" alt="Google">
-            <div class="company-info">
-              <h4>Google</h4>
-              <p>Cloud Services</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/apple/white" alt="Apple">
-            <div class="company-info">
-              <h4>Apple</h4>
-              <p>Technology Innovation</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/meta/white" alt="Meta">
-            <div class="company-info">
-              <h4>Meta</h4>
-              <p>Social Media</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/netflix/white" alt="Netflix">
-            <div class="company-info">
-              <h4>Netflix</h4>
-              <p>Streaming Platform</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/tesla/white" alt="Tesla">
-            <div class="company-info">
-              <h4>Tesla</h4>
-              <p>Electric Vehicles</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/ibm/white" alt="IBM">
-            <div class="company-info">
-              <h4>IBM</h4>
-              <p>Cloud & AI</p>
-            </div>
-          </div>
-        </div>
-        <!-- Duplicate for infinite scroll -->
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/microsoft/white" alt="Microsoft">
-            <div class="company-info">
-              <h4>Microsoft</h4>
-              <p>Enterprise Solutions</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/amazon/white" alt="Amazon">
-            <div class="company-info">
-              <h4>Amazon</h4>
-              <p>E-Commerce Platform</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/google/white" alt="Google">
-            <div class="company-info">
-              <h4>Google</h4>
-              <p>Cloud Services</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/apple/white" alt="Apple">
-            <div class="company-info">
-              <h4>Apple</h4>
-              <p>Technology Innovation</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/meta/white" alt="Meta">
-            <div class="company-info">
-              <h4>Meta</h4>
-              <p>Social Media</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/netflix/white" alt="Netflix">
-            <div class="company-info">
-              <h4>Netflix</h4>
-              <p>Streaming Platform</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/tesla/white" alt="Tesla">
-            <div class="company-info">
-              <h4>Tesla</h4>
-              <p>Electric Vehicles</p>
-            </div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-card">
-            <img src="https://cdn.simpleicons.org/ibm/white" alt="IBM">
-            <div class="company-info">
-              <h4>IBM</h4>
-              <p>Cloud & AI</p>
+    <div class="clients-slider">
+      <div class="clients-track">
+        <div class="client-card" *ngFor="let client of allClients" (click)="openClientSite(client.website)">
+          <div class="client-logo-bg" [style.backgroundImage]="'url(' + (client.logo | driveImage) + ')'">
+            <div class="client-overlay">
+              <div class="client-content">
+                <img [src]="client.logo | driveImage" [alt]="client.name" loading="lazy" (error)="onImageError($event, client.name)">              
+                <h4>{{ client.name }}</h4>
+                <p>{{ client.description }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -440,7 +306,7 @@
 <app-project-category></app-project-category>
 
 <!-- Case Studies Section -->
-<section class="case-studies-section">
+<section class="case-studies-section" style="display: none;">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title"><strong>Success Stories</strong></h2>
@@ -526,19 +392,19 @@
     <div class="stats-grid">
       <div class="stat-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="400">
         <div class="stat-icon">🚀</div>         
-        <div class="stat-number">{{ companyInfo.stats.projectsCompleted }}</div>
+        <div class="stat-number" id="projectsCounter">0</div>
         <div class="stat-label">Projects Delivered</div>
         <div class="stat-glow"></div>
       </div>
       <div class="stat-item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
         <div class="stat-icon">😊</div>
-        <div class="stat-number">{{ companyInfo.stats.happyClients }}</div>
+        <div class="stat-number" id="clientsCounter">0</div>
         <div class="stat-label">Happy Clients</div>
         <div class="stat-glow"></div>
       </div>
       <div class="stat-item" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="400">
         <div class="stat-icon">⭐</div>
-        <div class="stat-number">{{ companyInfo.stats.yearsExperience }}</div>
+        <div class="stat-number" id="experienceCounter">0</div>
         <div class="stat-label">Years Experience</div>
         <div class="stat-glow"></div>
       </div>
@@ -564,7 +430,7 @@
       <div class="slider-track">
         <div class="team-card" *ngFor="let member of allMembers" (click)="openMemberModal(member)">
           <div class="member-image">
-            <img [src]="member.image" [alt]="member.name">
+            <img [src]="member.image | driveImage" [alt]="member.name" referrerpolicy="no-referrer" (error)="onImageError($event, member.name)">
             <div class="image-overlay">
               <div class="overlay-content">
                 <span class="view-profile">View Profile</span>
@@ -590,7 +456,7 @@
     <button class="modal-close" (click)="closeModal()">&times;</button>
     <div class="modal-body">
       <div class="modal-image">
-        <img [src]="selectedMember.image" [alt]="selectedMember.name">
+        <img [src]="selectedMember.image | driveImage" [alt]="selectedMember.name" referrerpolicy="no-referrer" (error)="onImageError($event, selectedMember.name)">
       </div>
       <div class="modal-info">
         <h2 class="modal-name">{{selectedMember.name}}</h2>
